@@ -20,7 +20,7 @@ def process_ocr(image):
 
     return text
 
-
+#-----------------------------
 # plt.figure(figsize=(12, 10))
 #
 # plt.subplot(1, 3, 1)

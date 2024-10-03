@@ -13,8 +13,6 @@ def process_ocr(image):
     x_start, y_start, width, height = 200, 450, 800, 2400
     cropped_img = img_np[y_start:y_start + height, x_start:x_start + width]
 
-    gray_img = cv2.cvtColor(cropped_img, cv2.COLOR_BGR2GRAY)
-
     custom_config = r'--oem 3 --psm 6'
     text = pytesseract.image_to_string(cropped_img, config=custom_config, lang='kor')
 

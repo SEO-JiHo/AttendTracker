@@ -6,6 +6,7 @@ from datetime import datetime
 import pandas as pd
 
 
+# 날짜 패턴: "9/30" 혹은 "9월 30일"
 date_pattern = re.compile(r"(\d{1,2}/\d{1,2}|\d+월 \d+일)")
 
 def format_date(date_str):

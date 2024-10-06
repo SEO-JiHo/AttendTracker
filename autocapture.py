@@ -2,7 +2,9 @@ import subprocess
 import os
 
 
+# ADB 절대경로 설정
 adb_path = r'C:\Users\jhseo\Downloads\platform-tools-latest-windows\platform-tools\adb.exe'
+
 image_folder = "./screenshots-auto"
 
 def capture_screenshot():

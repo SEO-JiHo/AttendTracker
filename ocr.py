@@ -1,10 +1,10 @@
 import numpy as np
 from PIL import Image
 import pytesseract
-import cv2
 # import matplotlib.pyplot as plt
 
 def process_ocr(image):
+    # Tesseract 경로 직접 설정
     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
     img = Image.open(image)

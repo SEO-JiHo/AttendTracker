@@ -70,7 +70,7 @@ AttendTracker/
 python main.py
 ```
 
-정상적으로 작동한 경우 `attendance_log.csv` 파일로 저장합니다.
+정상적으로 작동한 경우 `attendance_log.csv` 파일에 저장됩니다.
 
 ---
 

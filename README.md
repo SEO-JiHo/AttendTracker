@@ -126,4 +126,4 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 adb_path = r'C:\Users\jhseo\Downloads\platform-tools-latest-windows\platform-tools\adb.exe'
 ```
 
-만약 경로가 정상적으로 설정되었다면 `capture_screenshot` 함수에서 adb_path를 "adb"로 수정하면 됩니다.
+만약 경로가 정상적으로 설정되었다면 `capture_screenshot` 메서드에서 adb_path를 "adb"로 수정하면 됩니다.

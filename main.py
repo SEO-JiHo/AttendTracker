@@ -12,7 +12,7 @@ date_pattern = re.compile(r"(\d{1,2}/\d{1,2}|\d+월 \d+일)")
 def format_date(date_str):
     try:
         if '/' in date_str:
-            return datetime.strptime(f"2024-{date_str}", "%Y-%m/%d").strftime("%Y-%m-%d")
+            return datetime.strptime(f"2025-{date_str}", "%Y-%m/%d").strftime("%Y-%m-%d")
 
         elif '월' in date_str and '일' in date_str:
             date_tmp = date_str.replace('월', '').replace('일', '').strip()
@@ -53,14 +53,14 @@ while True:
             continue
 
         # 참석/취소
-        if "정모에" in individual_data:
+        if "정모에" in individual_data or "참석하" in individual_data:
             if name in data_dict:
                 if date not in data_dict[name]:
                     data_dict[name].append(date)
             else:
                 data_dict[name] = [date]
 
-        elif "취소" in individual_data:
+        elif "취소" in individual_data or "참석을" in individual_data:
             if name in data_dict and date in data_dict[name]:
                 data_dict[name].remove(date)
             else:
@@ -75,4 +75,4 @@ while True:
 
 df = pd.DataFrame([(name, dates) for name, dates in data_dict.items()], columns=['Name', 'Dates'])
 print(df)
-df.to_csv("attendance_log.csv", index=False)
+df.to_csv("attendance_log.csv", index=False, encoding="utf-8-sig")

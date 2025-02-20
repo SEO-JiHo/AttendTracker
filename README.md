@@ -84,7 +84,7 @@ x_start, y_start, width, height = 200, 450, 800, 2400
 ```
 
 ### 스크롤 동작 설정
-`autocapture.py` 파일에서 스크롤 동작을 수행하는 `scroll_down` 함수의 swipe 명령에 있는 숫자는 스크롤할 때의 시작점과 끝점을 나타냅니다.
+`autocapture.py` 파일에서 스크롤 동작을 수행하는 `scroll_down` 메서드의 swipe 명령에 있는 숫자는 스크롤할 때의 시작점과 끝점을 나타냅니다.
 
 ```
 subprocess.run([adb_path, "shell", "input", "swipe", "500", "2300", "500", "400", "1300"])
@@ -113,7 +113,7 @@ Name,Dates
 Tesseract와 ADB의 설치 경로를 환경 변수에 추가해도 아래와 같이 에러가 나는 경우
 
 ### /system/bin/sh: adb: inaccessible or not found
-`ocr.py` 파일의 `process_ocr` 함수에서 Tesseract 실행 파일의 경로를 직접 설정해야 합니다.
+`ocr.py` 파일의 `process_ocr` 메서드에서 Tesseract 실행 파일의 경로를 직접 설정해야 합니다.
 
 ```ocr.py
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
